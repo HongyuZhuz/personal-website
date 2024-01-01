@@ -19,4 +19,5 @@
 body {
   @apply bg-center bg-cover;
   background-image:url('/bg.jpg');
+  background-attachment:fixed;
 }
