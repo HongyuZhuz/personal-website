@@ -10,19 +10,18 @@ export const Header:React.FC = ()=>{
                 <div className="max-w-6xl mx-auto text-left">
                 <div className="max-w-2x1 ml-12">
                     <p className="text-3xl ml-2">I&apos;m Hongyu Zhu</p>
-                    <div className="text-8xl mt-4 mb-8">
-                        <p className="text-red-500">Developer</p>
+                    <div className="text-6xl mt-4 mb-8 md:text-8xl">
+                        <p className="text-red-500 font-bold">Developer</p>
                         <p className="text-white">AND</p>
-                        <p className="text-red-500">Designer</p>
+                        <p className="text-red-500 font-bold">Designer</p>
                     </div>
                 <p className="text-m max-w-md ml-2">If you are looking for someone with professional computer science skills and impressive design ability, I would be your perfect choice.</p> 
-                <button className="ml-2 mt-8 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                <button className="ml-2 mt-8 bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded">
                     Learn more
                 </button>
                 </div>
                 </div>
             </div>
-        </header>
-        
+        </header> 
     )
 }
