@@ -8,7 +8,7 @@ export const Header:React.FC = ()=>{
         <div className="w-full bg-black bg-opacity-50 bg-cover bg-no-repeat text-white p-12 mt-20 md:mt-40">
             <div className="max-w-6xl mx-auto text-left">
                 <div className="max-w-2x1 ml-12">
-                    <p className="text-3xl ml-2">I'm Hongyu Zhu</p>
+                    <p className="text-3xl ml-2">I&apos;m Hongyu Zhu</p>
                     <div className="text-8xl mt-4 mb-8">
                         <p className="text-red-500">Developer</p>
                         <p className="text-white">AND</p>
