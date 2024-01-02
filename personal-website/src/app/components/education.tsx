@@ -1,18 +1,41 @@
 let developingSkill:Array<SkillProps> = [
-    {name:"Programming language",
+    
+    {name:"HTML,CSS,JavaScript Knowledge",
     p:"96%"
     },
-    {name:"Programming",
+    {name:"Experienced in React",
+    p:"95%"
+    },
+    {name:"Profitiont with Git, implementing projects on GitHub",
+    p:"100%"
+    },
+    {name:"Experienced in Next.js+Typescript+Tailwind project",
+    p:"80%"
+    },
+    {name:"Build website through SST and AWS",
+    p:"76%"
+    },
+    {name:"DevOps knowledge of Docker (IBM assessment)",
     p:"70%"
     },
 ]
 let designSkill:Array<SkillProps> = [
-    {name:"Design",
+    {name:"UI/UX Design Expertise",
     p:"100%"
     },
-    {name:"Programming",
-    p:"70%"
+    {name:"Adobe Suite: PS,Ai,Id,Lightroom",
+    p:"100%"
     },
+    {name:"3D Modelling: SketchUp, Rhino",
+    p:"94%"
+    },
+    {name:"Architeture-building: Autodesk CAD",
+    p:"90%"
+    },
+    {name:"Strong Data Visualization skills",
+    p:"100%"
+    },
+
 ]
 
 
@@ -81,11 +104,11 @@ const Education = () =>{
 const SkillList = () =>{
     return (
         <div className="md:w-1/2">
-            <h2 className="text-4xl mb-4">My Skills</h2>
-                <div className="md:mb-6">
+            <h2 className="text-4xl mb-4 ">My Skills</h2>
+                <div>
                     <DevelopSkills/>
                 </div>
-                <div className="md:mt-64">
+                <div className="md:mt-10">
                     <DesignSkills/>
                 </div>
         </div>
@@ -118,14 +141,14 @@ const DesignSkills = () =>{
 
 const Skill:React.FC<SkillProps> = ({name,p}) =>{
     return(
-        <div className=" text-white">
+        <div className=" text-white max-w-md mt-4 md:mt-2">
             <div className="my-2">
                 <div className="flex justify-between">
                     <span>{name} </span>
                     <span>{p}</span>
                 </div>
-                <div className="w-full bg-gray-700 h-2">
-                    <div className="bg-red-500 h-2" style={{ width: p }}></div>
+                <div className="w-full bg-white h-1">
+                    <div className="bg-red-500 h-1" style={{ width: p }}></div>
                 </div>
             </div>
         </div>
