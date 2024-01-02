@@ -1,3 +1,10 @@
+interface SkillProps {
+    name:string;
+    p:string;
+}
+interface SkillsProps {
+    s:Array<SkillProps>;
+}
 let developingSkill:Array<SkillProps> = [
     
     {name:"HTML,CSS,JavaScript Knowledge",
@@ -113,10 +120,10 @@ const SkillList = () =>{
             <div>
                 <h2 className="text-4xl mb-4 ml-1">My Skills</h2>
                 <div>
-                    <DevelopSkills/>
+                    <Skills s ={developingSkill}/>
                 </div>
                 <div className="md:mt-10">
-                    <DesignSkills/>
+                    <Skills s= {designSkill}/>
                 </div>
             </div>
             
@@ -124,30 +131,20 @@ const SkillList = () =>{
     )
 }
 
-type SkillProps = {
-    name:string;
-    p:string;
-}
+
 
 
     
-const DevelopSkills = () =>{
+const Skills:React.FC<SkillsProps> = ({s}) =>{
     return(
         <div className="m-2">
-        {developingSkill.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))}
+        {s.map(ss=>(<Skill key = {ss.name} name={ss.name} p={ss.p}/>))}
         </div>
        
     )
    
 }
-const DesignSkills = () =>{
-    return(
-        <div className="m-2">
-        {designSkill.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))}
-        </div>
-    )
-   
-}
+
 
 const Skill:React.FC<SkillProps> = ({name,p}) =>{
     return(
