@@ -39,16 +39,15 @@ let designSkill:Array<SkillProps> = [
 ]
 
 
-export const MyEducationSection:React.FC = ()=>{
+export const MyEducationSection = ()=>{
     return(
         <section>
             <div className="bg-black bg-opacity-70 text-white p-10">
-                <p className="text-red-600 text-xl font-bold md:ml-10">BACKGROUND</p>
-                <div className="flex flex-col md:flex-row md:ml-10">
-                    <EducationList />
-                    <SkillList />
                     
-                </div>
+                    <div className="flex flex-col md:flex-row md:ml-10">
+                        <EducationList />
+                        <SkillList />
+                    </div>
             </div>
         </section>
         
@@ -57,14 +56,21 @@ export const MyEducationSection:React.FC = ()=>{
 
 const EducationList = () =>{
     return (
-        <div className="md:w-1/2">
-            <h2 className="text-4xl mb-4">My Education</h2>
-            <div className="mb-6 flex flex-row">
-                <div className="md:flex hidden">
-                    <Bar />
+        <div className="md:w-1/2 flex justify-end">
+            <div>
+                <div className="ml-3 md:ml-0">
+                    <p className="text-red-600 text-xl font-bold ">BACKGROUND</p>
+                    <h2 className="text-4xl md:mb-4">My Education</h2>
                 </div>
+                
+                <div className="mb-6 flex flex-row">
+                    <div className="md:flex hidden">
+                        <Bar />
+                    </div>
                 <Education />
-            </div> 
+            </div>
+            </div>
+             
         </div>
     )
 }
@@ -103,14 +109,17 @@ const Education = () =>{
 
 const SkillList = () =>{
     return (
-        <div className="md:w-1/2">
-            <h2 className="text-4xl mb-4 ">My Skills</h2>
+        <div className="md:w-1/2 mt-8 flex justify-start">
+            <div>
+                <h2 className="text-4xl mb-4 ml-1">My Skills</h2>
                 <div>
                     <DevelopSkills/>
                 </div>
                 <div className="md:mt-10">
                     <DesignSkills/>
                 </div>
+            </div>
+            
         </div>
     )
 }
@@ -124,17 +133,18 @@ type SkillProps = {
     
 const DevelopSkills = () =>{
     return(
-        <ul>
-            {developingSkill.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))}
-        </ul>
+        <div className="m-2">
+        {developingSkill.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))}
+        </div>
+       
     )
    
 }
 const DesignSkills = () =>{
     return(
-        <ul>
-            {designSkill.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))}
-        </ul>
+        <div className="m-2">
+        {designSkill.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))}
+        </div>
     )
    
 }
