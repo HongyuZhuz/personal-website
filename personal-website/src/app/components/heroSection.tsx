@@ -4,7 +4,7 @@ export const HeroSection:React.FC = ()=>{
     return(
         <section>
             <div className="w-full bg-black bg-opacity-50 bg-cover bg-no-repeat text-white p-12 mt-20 mb-20">
-                <div className="ml-12  md:w-1/2 md:mx-auto">
+                <div className="  md:w-1/2 md:mx-auto ">
                     <p className="text-3xl ml-1">I&apos;m Hongyu Zhu</p>
                     <div className="text-6xl mb-3 md:text-8xl mt-0">
                         <p className="text-red-500 font-bold">Developer</p>
