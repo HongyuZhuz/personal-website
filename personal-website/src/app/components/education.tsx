@@ -1,11 +1,18 @@
-let sk:Array<SkillProps> = [
+let developingSkill:Array<SkillProps> = [
     {name:"Programming language",
     p:"96%"
     },
     {name:"Programming",
-    p:"10%"
+    p:"70%"
     },
-
+]
+let designSkill:Array<SkillProps> = [
+    {name:"Design",
+    p:"100%"
+    },
+    {name:"Programming",
+    p:"70%"
+    },
 ]
 
 
@@ -76,9 +83,11 @@ const SkillList = () =>{
         <div className="md:w-1/2">
             <h2 className="text-4xl mb-4">My Skills</h2>
                 <div className="mb-6">
-                    <Skills/>
+                    <DevelopSkills/>
                 </div>
-                {/* 更多技能列表 */}
+                <div className="mt-64">
+                    <DesignSkills/>
+                </div>
         </div>
     )
 }
@@ -90,12 +99,18 @@ type SkillProps = {
 
 
     
-const Skills = () =>{
+const DevelopSkills = () =>{
     return(
         <ul>
-            {
-                 sk.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))
-            }
+            {developingSkill.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))}
+        </ul>
+    )
+   
+}
+const DesignSkills = () =>{
+    return(
+        <ul>
+            {designSkill.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))}
         </ul>
     )
    
