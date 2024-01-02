@@ -82,10 +82,10 @@ const SkillList = () =>{
     return (
         <div className="md:w-1/2">
             <h2 className="text-4xl mb-4">My Skills</h2>
-                <div className="mb-6">
+                <div className="md:mb-6">
                     <DevelopSkills/>
                 </div>
-                <div className="mt-64">
+                <div className="md:mt-64">
                     <DesignSkills/>
                 </div>
         </div>
