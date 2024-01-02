@@ -59,7 +59,7 @@ const EducationList = () =>{
         <div className="md:w-1/2 flex justify-end">
             <div>
                 <div className="ml-3 md:ml-0">
-                    <p className="text-red-600 text-xl font-bold ">BACKGROUND</p>
+                    <p className="text-red-500 text-xl font-bold ">BACKGROUND</p>
                     <h2 className="text-4xl md:mb-4">My Education</h2>
                 </div>
                 
@@ -78,7 +78,7 @@ const EducationList = () =>{
 const Bar = ()=>{
     return(
         <div className="flex flex-col p-4 mt-5 max-h-[450px]">
-            <div className="bg-red-600 h-screen w-px relative">
+            <div className="bg-red-500 h-screen w-px relative">
                 <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-red-500 rounded-full"></div>
                 <div className="absolute top-56 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-red-500 rounded-full"></div>
             </div>
@@ -94,14 +94,14 @@ const Education = () =>{
                 <p className="text-red-500 font-bold">2018-2020</p>
                 <h2 className="text-2xl font-bold">Master of Computing</h2>
                 <p className="text-sm">A two-year Masters Degree provided by Australian National University, which enabled me to develop a deep and in-depth knowledge and understanding of professional software development and computing practices.</p>
-                <a href="#more" className="text-red-600 underline">More</a>
+                <a href="#more" className="text-red-500 underline">More</a>
             </div>
             <div className="my-4">
                 <h3 className="text-md text-white">As a designer</h3>
                 <p className="text-red-500 font-bold">2014-2018</p>
                 <h2 className="text-2xl font-bold">Bachelor of Landscape Architecture</h2>
                 <p className="text-sm">Beijing Forestry University offers the best Landscape Architecture program in China. This four-year curriculum enabled me to develop deep understanding in the area Architecture, Landscape Architecture and Digital Design.</p>
-                <a href="#more" className="text-red-600 underline">More</a>
+                <a href="#more" className="text-red-500 underline">More</a>
             </div>
         </div>
     )

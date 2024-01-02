@@ -16,7 +16,7 @@ export const AboutMe = () => {
     return(
         <>
         <div className="justify-self-center md:justify-self-end">
-            <Image src="/my-profile-pic-2.jpg" alt="Profile" className=" border-2 border-red-600 mr-10 ml-10 mt-20 w-80" width={300} height={300}/>
+            <Image src="/my-profile-pic-2.jpg" alt="Profile" className=" border-2 border-red-500 mr-10 ml-10 mt-20 w-80" width={300} height={300}/>
         </div>
         </> 
     )
