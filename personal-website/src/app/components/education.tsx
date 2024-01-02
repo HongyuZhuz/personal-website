@@ -1,3 +1,14 @@
+let sk:Array<SkillProps> = [
+    {name:"Programming language",
+    p:"96%"
+    },
+    {name:"Programming",
+    p:"10%"
+    },
+
+]
+
+
 export const MyEducationSection:React.FC = ()=>{
     return(
         <section>
@@ -5,7 +16,7 @@ export const MyEducationSection:React.FC = ()=>{
                 <p className="text-red-600 text-xl font-bold md:ml-10">BACKGROUND</p>
                 <div className="flex flex-col md:flex-row md:ml-10">
                     <EducationList />
-                    <Skills />
+                    <SkillList />
                     
                 </div>
             </div>
@@ -22,7 +33,6 @@ const EducationList = () =>{
                 <div className="md:flex hidden">
                     <Bar />
                 </div>
-                
                 <Education />
             </div> 
         </div>
@@ -61,14 +71,48 @@ const Education = () =>{
     )
 }
 
-const Skills = () =>{
+const SkillList = () =>{
     return (
         <div className="md:w-1/2">
             <h2 className="text-4xl mb-4">My Skills</h2>
                 <div className="mb-6">
-                    {/* 技能列表 */}
+                    <Skills/>
                 </div>
                 {/* 更多技能列表 */}
+        </div>
+    )
+}
+
+type SkillProps = {
+    name:string;
+    p:string;
+}
+
+
+    
+const Skills = () =>{
+    return(
+        <ul>
+            {
+                 sk.map(s=>(<Skill key = {s.name} name={s.name} p={s.p}/>))
+            }
+        </ul>
+    )
+   
+}
+
+const Skill:React.FC<SkillProps> = ({name,p}) =>{
+    return(
+        <div className=" text-white">
+            <div className="my-2">
+                <div className="flex justify-between">
+                    <span>{name} </span>
+                    <span>{p}</span>
+                </div>
+                <div className="w-full bg-gray-700 h-2">
+                    <div className="bg-red-500 h-2" style={{ width: p }}></div>
+                </div>
+            </div>
         </div>
     )
 }
