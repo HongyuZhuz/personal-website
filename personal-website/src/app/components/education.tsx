@@ -56,7 +56,7 @@ export const MyEducationSection = ()=>{
 
 const EducationList = () =>{
     return (
-        <div className="md:w-1/2 flex justify-end">
+        <div className="md:w-1/2 flex md:justify-end justify-center">
             <div>
                 <div className="ml-3 md:ml-0">
                     <p className="text-red-500 text-xl font-bold ">BACKGROUND</p>
@@ -109,7 +109,7 @@ const Education = () =>{
 
 const SkillList = () =>{
     return (
-        <div className="md:w-1/2 mt-8 flex justify-start">
+        <div className="md:w-1/2 mt-8 flex md:justify-start justify-center">
             <div>
                 <h2 className="text-4xl mb-4 ml-1">My Skills</h2>
                 <div>

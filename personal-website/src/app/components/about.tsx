@@ -3,10 +3,9 @@ import Image from 'next/image';
 export const AboutMe = () => {
     return (
       <section className="about-me-section w-full bg-black">
-        <div className="grid md:grid-cols-2 justify-center ">
+        <div className="flex md:flex-row flex-col justify-center ">
             <ProfilePic />
-            <WhoIAm />
-            
+            <WhoIAm /> 
         </div>
       </section>
     );
