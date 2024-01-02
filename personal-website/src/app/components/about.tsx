@@ -3,8 +3,8 @@
 export const AboutMe = () => {
     return (
       <section className="about-me-section w-full bg-black">
-        <div className="flex flex-col md:flex-row p-20">
-            <ProfilePic/>
+        <div className="grid md:grid-cols-2 justify-center ">
+            <ProfilePic />
             <WhoIAm />
             
         </div>
@@ -15,8 +15,8 @@ export const AboutMe = () => {
   const ProfilePic = () =>{
     return(
         <>
-        <div className=" md:basis-1/2 flex justify-end">
-            <img src=" /my-profile-pic.jpg" alt="Profile" className="object-cover border-2 border-red-500 w-50 h-80 mr-10 mt-10" />
+        <div className="justify-self-center md:justify-self-end">
+            <img src=" /my-profile-pic-2.jpg" alt="Profile" className=" border-2 border-red-500 mr-10 mt-20 w-80"/>
         </div>
         </> 
     )
@@ -24,7 +24,7 @@ export const AboutMe = () => {
 
   const WhoIAm = () =>{
     return(
-        <div className=" md:basis-1/2 bg-black text-white p-10 max-w-md">
+        <div className=" md:basis-1/2 bg-black text-white p-10 max-w-md justify-self-cente">
             <div className="mb-4">
                 <h2 className="text-xl mb-2 text-red-500 md:text-2xl">ABOUT ME</h2>
                 <h1 className="text-4xl font-bold mb-4 md:text-5xl">Who I am?</h1>
