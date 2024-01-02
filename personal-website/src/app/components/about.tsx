@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 
 export const AboutMe = () => {
     return (
@@ -16,7 +16,7 @@ export const AboutMe = () => {
     return(
         <>
         <div className="justify-self-center md:justify-self-end">
-            <img src=" /my-profile-pic-2.jpg" alt="Profile" className=" border-2 border-red-500 mr-10 mt-20 w-80"/>
+            <Image src="/my-profile-pic-2.jpg" alt="Profile" className=" border-2 border-red-500 mr-10 mt-20 w-80" width={300} height={300}/>
         </div>
         </> 
     )
@@ -29,12 +29,12 @@ export const AboutMe = () => {
                 <h2 className="text-xl mb-2 text-red-500 md:text-2xl">ABOUT ME</h2>
                 <h1 className="text-4xl font-bold mb-4 md:text-5xl">Who I am?</h1>
                 <p className="text-lg mb-4 text-red-500">Outstanding learning ability and full of potential</p>
-                <p className="text-sm mb-4 md:text-lg">Blending a Bachelor's in Landscape Architecture with a Master's in Computing, 
+                <p className="text-sm mb-4 md:text-lg">Blending a Bachelor&apos;s in Landscape Architecture with a Master&apos;s in Computing, 
                     I am an imaginative programmer ready to bring your vision to life. 
                     My unique mix of creative and technical acumen allows me to craft digital solutions that are not only efficient but also aesthetically engaging. 
                     As a quick learner with a diverse range of interests, 
                     I thrive in new challenges and adapt swiftly to emerging trends.
-                     If you're seeking a resourceful and inventive individual who can infuse your projects with a fresh perspective, let's connect!</p>
+                     If you&apos;re seeking a resourceful and inventive individual who can infuse your projects with a fresh perspective, let&apos;s connect!</p>
                 
             </div>
         </div>
