@@ -9,9 +9,11 @@ import aws from '../../creatingAws'
 
 
 
+
 export default function Home() {
-  const [message, setMessage] = useState();
-  const [file,setFile] = useState();
+  const [message, setMessage] = useState<string | undefined>(undefined);
+  const [file,setFile] = useState<any>(undefined);
+  
 
   function storeFile(e:any){
     console.log("test3");
@@ -20,9 +22,13 @@ export default function Home() {
 
   const uploadFile = async()=>{
     setMessage("uploading!");
-    var returnData = await aws(file);//send file to api endpoint
+    if (file instanceof File) {
+      var returnData = await aws(file);//send file to api endpoint
+  }
+    
 
     setMessage(String(returnData));
+    
     setFile(null);
   }
 
