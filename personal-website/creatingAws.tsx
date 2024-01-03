@@ -1,17 +1,15 @@
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { PutObjectCommand, S3 } from "@aws-sdk/client-s3";
 import axios from "axios";
-import { kv } from '@vercel/kv';
-import { NextResponse } from 'next/server';
 
 
 const s3 = new S3({
-    region:"ap-southeast-2",
+    region: "ap-southeast-2",
     credentials: {
-        accessKeyId:process.env.ACCESS_KEY_ID,
-        secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY,
+      accessKeyId: process.env.ACCESS_KEY_ID || "", // 确保 accessKeyId 是一个字符串
+      secretAccessKey: process.env.SECRET_ACCESS_KEY || "", // 确保 secretAccessKey 是一个字符串
     },
-})
+  });
 
 export default async function aws(file:File){
     try{
