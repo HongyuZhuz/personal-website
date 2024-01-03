@@ -6,8 +6,8 @@ const s3 = new S3({
     region:"ap-southeast-2",
 
     credentials: {
-        accessKeyId:"AKIAVGNQRL46SARFROIN",
-        secretAccessKey:"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",
+        accessKeyId:"a",
+        secretAccessKey:"b",
     },
 
 })
