@@ -1,6 +1,7 @@
 
 
 export const HeroSection:React.FC = ()=>{
+
     return(
         <section>
             <div className="w-full bg-black bg-opacity-50 bg-cover bg-no-repeat text-white p-12 mt-20 mb-20">
