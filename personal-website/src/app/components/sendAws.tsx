@@ -1,35 +1,61 @@
 'use client'
-import { useState } from 'react'
-import aws from '../API/creatingAws';
+import { useState } from 'react';
 
-export const SendAws=() =>{
-    const [message,setMessage] = useState();
-    const [file, setFile] = useState();
+export const SendAws = () => {
+    const [message, setMessage] = useState('');
+    const [file, setFile] = useState(null);
 
-    function storeFile(e)
-    {
-    setFile(e.target.files[0]);
-  }
+    const uploadFile = async () => {
+        if (!file) {
+            setMessage("No file selected!");
+            return;
+        }
 
-  const uploadFile = async()=>{
-    setMessage("uploading!");
+        setMessage("Getting upload URL...");
 
-    var returnData = await aws(file);
-    setMessage(String(returnData));
+        try {
+            const response = await fetch('/api/upload.ts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    fileName: file.name,
+                    contentType: file.type
+                })
+            });
 
-    setFile(null);
-  }
+            const { url } = await response.json();
 
-  return(
-    <div className='bg-white p-10'>
-    <p>Upload file:</p>
-    <p className='text-red-500'>{message}</p>
-    <input type = 'file' onChange = {(e)=>storeFile(e)}/>
-    <input type = "button" onClick={uploadFile} defaultValue = "Send"/>
-    <p></p>
-    </div>
-    
-  )
+            setMessage("Uploading...");
 
+            const s3Response = await fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': file.type
+                },
+                body: file
+            });
 
-}
+            if (s3Response.ok) {
+                setMessage("File successfully uploaded.");
+            } else {
+                setMessage("Upload to S3 failed.");
+            }
+        } catch (error) {
+            setMessage("An error occurred.");
+        }
+    };
+    const setA = (e) =>{
+        setFile(e.target.files[0])
+    }
+
+    return (
+        <div className='bg-white p-10'>
+            <p>Upload file:</p>
+            <p className='text-red-500'>{message}</p>
+            <input type='file' onChange={(e) => setA(e)} />
+            <button onClick={uploadFile}>Send</button>
+        </div>
+    );
+};
